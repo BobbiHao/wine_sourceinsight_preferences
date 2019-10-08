@@ -1,0 +1,22 @@
+0.	export LANG=en_US
+	xdg-user-dirs-gtk-update
+	echo 选 update
+	export LANG=zh_CN.UTF-8
+	xdg-user-dirs-gtk-update
+	echo 选“不要再提醒”和“保持原来的名称”
+
+1. wine sourceinsight装好之后，
+
+2. cd /home/bobbi/.wine/drive_c/windows,
+       运行:  wine regedit.exe.
+	找到: 计算机\HKEY_CURRENT_USER\Software\Source Dynamics\Source Insight\4.0\Paths.
+	在Paths上新建一个字符串UserDataDir，
+	其值数据改为C:\Program Files (x86)\Source Insight 4.0\Documents\Source Insight 4.0.
+
+3.	cd /home/bobbi/Documents, 
+	mkdir Source\ Insight\ 4.0, 
+	cd /home/bobbi/.wine/drive_c/Program Files (x86)/Source Insight 4.0,
+	mkdir Documents,
+	ln -s /home/bobbi/Documents/Source\ Insight\ 4.0/ Documents
+
+4. ok
